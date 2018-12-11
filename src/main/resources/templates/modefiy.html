@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultrag.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf in action</title>
+</head>
+<body>
+<form action="/insert" th:object="${user}">
+    <input type="hidden" name="id" th:value="${user.get().getId()}">
+    名称：<br>
+    <input type="text" name="name" th:value="${user.get().getName()}">
+    <br>
+    邮箱：<br>
+    <input type="text" name="email" th:value="${user.get().getEmail()}">
+    <input type="submit" value="提交" >
+</form>
+</body>
+</html>

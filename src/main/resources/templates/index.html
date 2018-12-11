@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<p></p>
+<table bgcolor="aqua" border="2px">
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>邮箱</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td th:text="${user.get().getId()}"></td>
+        <td th:text="${user.get().getName()}"></td>
+        <td th:text="${user.get().getEmail()}"></td>
+    </tr>
+</table>
+
+<!--<form name="login" action="" method="post">-->
+<!--用户Id<input name="id" type="text"><br>-->
+<!--邮箱<input name="email" type="password">-->
+<!--<input type="submit" value="提交">-->
+<!--</form>-->
+<script src="jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    // $ajax({
+    //     url:"all",
+    //     type:"get",
+    //     dataType:"json",
+    //     async: false,
+    //     success:function(data){
+    //         alert(data);
+    //         $.each(data,function(index,item){
+    //             var tr;
+    //             tr= "<td>"+item.id+"</td>"
+    //                 +"<td>"+item.name+"</td>"
+    //                 // +"<td>"+item.email+"</td>"
+    //             $("#tableare").append('<tr>'+tr+'</tr>')
+    //         })
+    //     },
+    //     error:function(){
+    //         // alert("失败");
+    //     }
+    // });
+</script>
+</body>
+</html>
